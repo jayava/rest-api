@@ -1,11 +1,11 @@
 package main
 
 import (
+	"encoding/json"
+	"github.com/gin-gonic/gin"
 	"io/ioutil"
 	"log"
 	"net/http"
-	"encoding/json"
-	"github.com/gin-gonic/gin"
 )
 
 /*
@@ -18,10 +18,10 @@ import (
 */
 
 type User struct {
-	UserID int `json:"userId"`
-	ID int `json:"id"`
-	Title string `json:"title"`
-	Completed bool `json:"completed"`
+	UserID    int    `json:"userId"`
+	ID        int    `json:"id"`
+	Title     string `json:"title"`
+	Completed bool   `json:"completed"`
 }
 
 func main() {

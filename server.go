@@ -14,7 +14,7 @@ import (
 	"id": 1,
 	"title": "delectus aut autem",
 	"completed": false
-}
+}K
 */
 
 type User struct {
@@ -27,11 +27,11 @@ type User struct {
 func main() {
 	gin.ForceConsoleColor()
 	router := gin.Default()
-	router.GET("/test", testAPI)
+	router.GET("/api/v1/todos", getTodos)
 	router.Run("localhost:8080")
 }
 
-func testAPI(c *gin.Context) {
+func getTodos(c *gin.Context) {
 	log.Println("Received API call")
 	cl := http.DefaultClient
 	r, e := cl.Get("https://jsonplaceholder.typicode.com/todos/1")
